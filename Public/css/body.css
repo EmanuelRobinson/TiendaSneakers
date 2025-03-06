@@ -1,0 +1,17 @@
+/* Estilos generales del body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+
+/* Es para la imagen de fondo */
+#cuerpo img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}

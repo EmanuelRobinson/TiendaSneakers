@@ -1,0 +1,41 @@
+/* Contenedor principal */
+#contenedor {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Cabecera */
+#cabecera {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: transparent;
+    padding: 10px 20px;
+}
+
+/* Menú */
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Navegación */
+#navegacion {
+    display: flex;
+    font-weight: bold;
+}
+
+#navegacion div {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+#navegacion div:hover {
+    color: yellow;
+    border-bottom: 3px solid yellow;
+}
