@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="Css/head.css">
     <link rel="stylesheet" href="Css/actions.css">
     <link rel="stylesheet" href="Css/footer.css"> 
-
 </head>
 <body>
     <div id="contenedor">
@@ -41,10 +40,24 @@
                 </div>
             </section>
         </header>
+
         <main id="cuerpo">
             <img src="../../Public/Images/hojas.jfif" alt="Hojas decorativas">
+            <div id="descripcion">
+                <h1>SOMOS UNA MARCA LOCAL ENFOCADA EN OFRECER ZAPATILLAS DE ALTA CALIDAD Y DISEÑO INNOVADOR</h1>
+                <div id="redes-sociales">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="https://img.icons8.com/color/48/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/123456789" target="_blank">
+                        <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
         </main>
     </div>
 </body>
 </html>
-
