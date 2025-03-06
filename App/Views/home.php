@@ -16,35 +16,36 @@
         <header id="cabecera">
             <section id="menu">
                 <div id="navegacion">
-                    <div id="ini">INICIO</div>
-                    <div id="hom">CABALLEROS</div>
-                    <div id="muj">DAMAS</div>
-                    <div id="nin">NIÑOS</div>
-                </div>
-                <div id="acciones">
-                    <div id="buscador">
-                        <input type="text" id="searchInput">
-                        <img src="https://img.icons8.com/?size=100&id=7695&format=png&color=000000" alt="lupa" id="lupa">
-                    </div>
-
-                    <div id="inicioSesion">
-                        <img src="https://img.icons8.com/?size=100&id=84898&format=png&color=FFFFFF" alt="inicio-sesion">
-                    </div>
-
-                    <div id="favoritos">
-                        <img src="https://img.icons8.com/?size=100&id=7697&format=png&color=FFFFFF" alt="corazon-favorito" class="favorito">
-                    </div>
-
-                    <div id="carrito">
-                        <img src="https://img.icons8.com/?size=100&id=9671&format=png&color=FFFFFF" alt="carrito">
-                    </div>
+                    <div id="ini" class="cargarVista" data-vista="inicio.php">INICIO</div>
+                    <div id="hom" class="cargarVista" data-vista="caballeros.php">CABALLEROS</div>
+                    <div id="muj" class="cargarVista" data-vista="damas.php">DAMAS</div>
+                    <div id="nin" class="cargarVista" data-vista="nenes.php">NIÑOS</div>
                 </div>
             </section>
         </header>
+        
         <main id="cuerpo">
-            <img src="../../Public/Images/hojas.jfif" alt="Hojas decorativas">
+            <div id="contenido">
+                <img src="../../Public/Images/hojas.jfif" alt="Hojas decorativas">
+            </div>
         </main>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('.cargarVista').forEach(elemento => {
+                elemento.addEventListener('click', function() {
+                    let vista = this.getAttribute('data-vista');
+
+                    fetch(`../App/Views/${vista}`)
+                        .then(response => response.text())
+                        .then(html => {
+                            document.getElementById('contenido').innerHTML = html;
+                        })
+                        .catch(error => console.error('Error al cargar la vista:', error));
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
