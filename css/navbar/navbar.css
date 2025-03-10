@@ -1,0 +1,52 @@
+.navbar {
+    width: 100%;
+    
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    padding-right: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Asegura que los elementos dentro también estén alineados a la derecha */
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 5px;
+}
+
+.navbar ul li a,
+.navbar ul li button,
+.navbar ul li input {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar ul li button {
+    background-color: transparent; /* Hace que los botones sean transparentes */
+    border: none;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+.navbar ul li input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
