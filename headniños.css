@@ -1,34 +1,45 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-}
-
-#contenedor {
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
-}
-
 #cabecera {
     position: absolute;
-    top: 40px;
-    right: 0;
-    background-color: transparent;
-    padding: 10px 20px;
+    top: 0px;
+    left: 0;
+    background-image: url('img/Fondo.jpg');
+    padding: 10px 50px;
+    width: 100%;
+    z-index: 1000;
 }
 
 #menu {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#logo img:first-child {
+    width: 40px;
+    height: 40px;
+}
+
+#logo img:last-child {
+    width: 130px;
+    height: auto;
+}
+
+#navegacion, #acciones {
+    display: flex;
     align-items: center;
     gap: 20px;
 }
 
 #navegacion {
-    display: flex;
     font-weight: bold;
+    margin-left: auto;
 }
 
 #navegacion div {
@@ -43,14 +54,23 @@ body {
     border-bottom: 3px solid yellow;
 }
 
+#navegacion a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+#navegacion a:hover {
+    color: yellow;
+}
+
 #acciones {
-    display: flex;
     gap: 25px;
-    align-items: center;
 }
 
 #buscador {
     position: relative;
+    margin-left: 15px;
 }
 
 #searchInput {
@@ -59,7 +79,7 @@ body {
     border-radius: 25px;
     border: none;
     background-color: #fff;
-    width: 100px;
+    width: 200px;
 }
 
 #lupa {
@@ -81,12 +101,6 @@ body {
 #acciones div:hover {
     color: inherit;
     border-bottom: none;
-}
-
-#cuerpo img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
 }
 
 #inicioSesion img, #carrito img, #favoritos img {

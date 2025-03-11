@@ -1,14 +1,18 @@
-<?php include('navbar.php')?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuario - Login y Registro</title>
-    <link rel="stylesheet" href="style.css"> <!-- Vínculo al CSS -->
+    <link rel="stylesheet" href="headniños.css">
+    <link rel="stylesheet" href="niños.css">
 </head>
 <body>
+    <header id="cabecera">
+         <section id="menu">
+         <?php include('navbar.php'); ?>
+        </section>
+    </header>
+</body>
 
 <h1>Estamos en Usuario</h1>
 
@@ -72,6 +76,5 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-<?php include('footer.php')?>
 </body>
 </html>

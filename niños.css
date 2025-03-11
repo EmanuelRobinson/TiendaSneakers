@@ -1,0 +1,288 @@
+/* Reset de estilos para asegurar consistencia en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo de la página */
+#cuerpo {
+    margin-top: 100px;
+    background-color: #fff;
+    height: 100%;
+}
+
+/* Estilos de la sección de filtros */
+#opciones {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    gap: 0;
+    border: 1px solid black;
+    padding: 0;
+    height: 60px;
+}
+
+.opcion {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#resultadoCantidad {
+    text-align: left;
+    padding-left: 10px;
+}
+
+#ocultarFiltro, #ordenarPor {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+#ocultarFiltro:hover, #ordenarPor:hover {
+    color: #007bff;
+}
+
+/* Menú desplegable de opciones de ordenamiento */
+#ordenarOpciones {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+#ordenarPor:hover #ordenarOpciones {
+    display: block;
+}
+
+.opcionLista {
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.opcionLista:hover {
+    background-color: #f1f1f1;
+}
+
+.opcionLista:last-child {
+    border-bottom: none;
+}
+
+/* Estilos de la sección de categorías */
+#categoria {
+    width: 30%;
+    height: 1500px;
+    float: left;
+    margin-top: 20px;
+}
+
+/* Estilos de la sección de estilos */
+#estilo {
+    width: 100%;
+    height: 25%;
+    background: brown;
+}
+
+/* Estilos de la sección de marcas */
+#marca {
+    width: 100%;
+    height: 15%;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+#marca h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#marca-opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.marca-opcion {
+    display: flex;
+    align-items: center;
+}
+
+.marca-opcion input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.marca-nombre {
+    font-size: 16px;
+}
+
+/* Estilos de la sección de precio */
+#precio {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#rango-precio {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+#precio-range {
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#precio-range::-webkit-slider-thumb,
+#precio-range::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Etiquetas del rango de precios */
+#rango-precio-etiquetas {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.etiqueta {
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.etiqueta:first-child {
+    left: 0%;
+}
+
+.etiqueta:nth-child(2) {
+    left: calc(25% - 20px);
+}
+
+.etiqueta:nth-child(3) {
+    left: calc(50% - 20px);
+}
+
+.etiqueta:nth-child(4) {
+    left: calc(75% - 20px);
+}
+
+.etiqueta:last-child {
+    left: calc(100% - 10%);
+}
+
+/* Estilos de la sección de tallas */
+#talla {
+    width: 100%;
+    height: 25%;
+    background: cyan;
+}
+
+#talla h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+/* Estilos de los productos mostrados */
+#productos {
+    width: 70%;
+    float: right;
+    margin-top: 20px;
+}
+
+/* Tabla de productos */
+table {
+    width: 90%;
+    border-spacing: 20px;
+    margin-left: 50px;
+    border: 1px solid black;
+}
+
+.producto {
+    position: relative;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.producto-info img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.nombre, .marca, .precio, .color {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.favorito-btn {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ff0000;
+    transition: color 0.3s ease;
+}
+
+.favorito-btn:hover {
+    color: #ff4d4d;
+}
+
+.agregar-carrito-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.agregar-carrito-btn:hover {
+    background-color: #218838;
+}
+
+.agregar-carrito-btn:active {
+    background-color: #1e7e34;
+}
+
+#contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 20px; /* Espacio entre productos */
+}
